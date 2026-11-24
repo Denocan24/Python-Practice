@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from src.core.errors import minimumNumberError
+from src.core.errors import invailedNumberError
 
 def argumentParser():
     parser = ArgumentParser()
@@ -11,4 +12,12 @@ def argumentParser():
     args = parser.parse_args()
     if args.initial_height <= 0:
         raise(minimumNumberError)
+    if args.gravity <= 0:
+            raise(minimumNumberError)
+    if args.restitution <= 0 or args.restitution > 1:
+            raise(invailedNumberError)
+    if args.dt <= 0:
+            raise(minimumNumberError)
+    if args.stop_threshold <= 0:
+            raise(minimumNumberError)
     return args

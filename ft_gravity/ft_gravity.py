@@ -1,5 +1,5 @@
 from src.parser import terminal_parser
-from src.core.errors import minimumNumberError
+from src.core.errors import minimumNumberError, invailedNumberError
 
 class Object:
     def __init__(self, id: int, name: str, location: tuple[int, int], weight: int):
@@ -30,5 +30,5 @@ if __name__ == "__main__":
         while k > 1:
             k -= 1
             print(k)
-    except minimumNumberError as e:
+    except(invailedNumberError, minimumNumberError)as e:
         print(e)
