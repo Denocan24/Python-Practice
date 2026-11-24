@@ -1,4 +1,5 @@
 from src.parser import terminal_parser
+from src.core.errors import minimumNumberError
 
 class Object:
     def __init__(self, id: int, name: str, location: tuple[int, int], weight: int):
@@ -19,13 +20,15 @@ class Object:
         self.location = coordinate
         
 if __name__ == "__main__":
-    terminal_parser.argumentParser()
     # player = Object(1, "Player", (0, terminal_parser.argumentParser()), 50)
     # player.grow(10)
     # player.move((0,0))
     # print(player.location)
-    print("Başlangıç Değerleri: ", terminal_parser.argumentParser())
-    k = terminal_parser.argumentParser().initial_height
-    while k > 1:
-        k -= 1
-        print(k)
+    try:
+        print("Başlangıç Değerleri: ", terminal_parser.argumentParser())
+        k = terminal_parser.argumentParser().initial_height
+        while k > 1:
+            k -= 1
+            print(k)
+    except minimumNumberError as e:
+        print(e)

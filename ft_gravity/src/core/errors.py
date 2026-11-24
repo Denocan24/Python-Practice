@@ -1,2 +1,2 @@
 class minimumNumberError(BaseException):
-    pass
+    print("The Initial_Height value you entered must be greater than 0.")
