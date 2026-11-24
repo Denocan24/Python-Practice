@@ -24,4 +24,8 @@ if __name__ == "__main__":
     # player.grow(10)
     # player.move((0,0))
     # print(player.location)
-    print(terminal_parser.argumentParser())
+    print("Başlangıç Değerleri: ", terminal_parser.argumentParser())
+    k = terminal_parser.argumentParser().initial_height
+    while k > 1:
+        k -= 1
+        print(k)
