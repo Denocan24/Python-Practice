@@ -8,4 +8,4 @@ def argumentParser():
     parser.add_argument("dt", type = float)
     parser.add_argument("stop_threshold", type = float)
     args = parser.parse_args()
-    print(args.initial_height)
+    return args

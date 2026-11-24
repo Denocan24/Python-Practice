@@ -1,3 +1,5 @@
+from src.parser import terminal_parser
+
 class Object:
     def __init__(self, id: int, name: str, location: tuple[int, int], weight: int):
         self.id = id
@@ -15,14 +17,11 @@ class Object:
                 print(j ,"Y")
             print(i, "X")
         self.location = coordinate
-
-
-
         
 if __name__ == "__main__":
-    player = Object(1, "Player", (0,0), 50)
-    print(player.weight)
-    player.grow(10)
-    print(player.weight)
-    player.move((3,10))
-    print(player.location)
+    terminal_parser.argumentParser()
+    # player = Object(1, "Player", (0, terminal_parser.argumentParser()), 50)
+    # player.grow(10)
+    # player.move((0,0))
+    # print(player.location)
+    print(terminal_parser.argumentParser())
