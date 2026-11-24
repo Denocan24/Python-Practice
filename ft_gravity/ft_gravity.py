@@ -20,10 +20,6 @@ class Object:
         self.location = coordinate
         
 if __name__ == "__main__":
-    # player = Object(1, "Player", (0, terminal_parser.argumentParser()), 50)
-    # player.grow(10)
-    # player.move((0,0))
-    # print(player.location)
     try:
         print("Başlangıç Değerleri: ", terminal_parser.argumentParser())
         k = terminal_parser.argumentParser().initial_height
