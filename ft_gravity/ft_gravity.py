@@ -15,9 +15,12 @@ class Object:
                 print(j ,"Y")
             print(i, "X")
         self.location = coordinate
+
+
+
         
 if __name__ == "__main__":
-    player = Object(id=1, name="Player", location=(0,0), weight=50)
+    player = Object(1, "Player", (0,0), 50)
     print(player.weight)
     player.grow(10)
     print(player.weight)
