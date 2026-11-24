@@ -1,4 +1,5 @@
 from argparse import ArgumentParser
+from src.core.errors import minimumNumberError
 
 def argumentParser():
     parser = ArgumentParser()
@@ -8,4 +9,6 @@ def argumentParser():
     parser.add_argument("dt", type = float)
     parser.add_argument("stop_threshold", type = float)
     args = parser.parse_args()
+    if args.initial_height <= 0:
+        raise(minimumNumberError)
     return args

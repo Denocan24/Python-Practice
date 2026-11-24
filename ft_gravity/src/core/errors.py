@@ -1,0 +1,2 @@
+class minimumNumberError(BaseException):
+    pass
